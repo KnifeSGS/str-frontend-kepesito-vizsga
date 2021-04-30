@@ -22,6 +22,8 @@ export class MovieListComponent implements OnInit {
 
   getMovies(): void { }
 
-  deleteMovie(id: number): any { }
+  deleteMovie(id: number): any {
+    this.httpService.deleteMovie(id)
+  }
 
 }

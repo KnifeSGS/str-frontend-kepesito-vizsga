@@ -19,7 +19,9 @@ export class HttpService {
     );
   }
 
-  deleteMovie(id): any {
-    return null;
+  deleteMovie(id: number): void {
+    this.http.delete(`${this.BASE_URL}/${id}`).subscribe(
+      () => this.getMovieList()
+    )
   }
 }
